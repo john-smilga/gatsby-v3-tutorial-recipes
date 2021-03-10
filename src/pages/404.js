@@ -1,11 +1,11 @@
 import React from "react"
 
-const Home = () => {
+const Error = () => {
   return (
     <main className="page">
-      <h2>Home Page</h2>
+      <h2>error page</h2>
     </main>
   )
 }
 
-export default Home
+export default Error
