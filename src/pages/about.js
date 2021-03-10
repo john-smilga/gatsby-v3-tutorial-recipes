@@ -14,7 +14,7 @@ const About = () => {
           <p>We're just getting started, so be sure to check back regularly!</p>
           <p>If you have any suggestions for us, shoot us a line!</p>
           <Link to="/contact" className="btn">
-            contact us
+            contact
           </Link>
         </article>
         <StaticImage

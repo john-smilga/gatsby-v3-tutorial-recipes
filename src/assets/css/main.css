@@ -345,10 +345,10 @@ form > *:last-child {
   margin-bottom: -6px;
 }
 .nav-btn {
-  padding: 0.15rem 1rem;
+  padding: 0.15rem 0.75rem;
 }
 .nav-btn svg {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .nav-links {
   height: 0;
