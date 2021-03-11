@@ -17,6 +17,7 @@
     "gatsby": "^3.0.1",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-source-contentful": "^5.0.3",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
     "normalize.css": "^8.0.1",

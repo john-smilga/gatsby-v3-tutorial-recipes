@@ -1,9 +1,9 @@
 import React from "react"
-
+import RecipesList from "../components/RecipesList"
 const Recipes = () => {
   return (
     <main className="page">
-      <h2>recipes</h2>
+      <RecipesList />
     </main>
   )
 }

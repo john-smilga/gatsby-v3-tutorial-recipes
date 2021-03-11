@@ -9,6 +9,9 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       {children}
+      <footer className="page-footer">
+        <h4>&copy; {new Date().getFullYear()} Gatsby Recipes</h4>
+      </footer>
     </>
   )
 }

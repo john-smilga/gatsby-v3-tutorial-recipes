@@ -22,7 +22,6 @@ const About = () => {
           alt="Person Pouring Salt in Bowl"
           className="about-img"
           placeholder="blurred"
-          height={500}
         ></StaticImage>
       </section>
     </main>
