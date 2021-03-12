@@ -430,7 +430,6 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
 }
 .page-footer h4 {
   margin-bottom: 0;
