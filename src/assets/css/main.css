@@ -513,7 +513,7 @@ form > *:last-child {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.tags-container h5 {
+.tags-container h4 {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
