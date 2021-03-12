@@ -440,12 +440,10 @@ form > *:last-child {
 .error-page {
   min-height: calc(100vh - (95.48px + 4rem));
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 5rem;
 }
 .error-page h1 {
-  font-size: 8rem;
+  font-size: 9rem;
 }
 @media screen and (min-width: 992px) {
   .error-page {
