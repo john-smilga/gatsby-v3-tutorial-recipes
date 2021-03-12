@@ -1,9 +1,9 @@
 import React from "react"
-import RecipesList from "../components/RecipesList"
+import AllRecipes from "../components/AllRecipes"
 const Recipes = () => {
   return (
     <main className="page">
-      <RecipesList />
+      <AllRecipes />
     </main>
   )
 }

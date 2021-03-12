@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import RecipesList from "../components/RecipesList"
-import Recipes from "../components/RecipesList"
+import AllRecipes from "../components/AllRecipes"
 
 const Home = () => {
   return (
@@ -22,7 +21,7 @@ const Home = () => {
         </div>
       </header>
       <section>
-        <RecipesList />
+        <AllRecipes />
       </section>
     </main>
   )
