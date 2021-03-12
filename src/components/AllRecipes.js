@@ -6,20 +6,13 @@ const query = graphql`
   {
     allContentfulRecipe(sort: { fields: title, order: ASC }) {
       nodes {
-        contentful_id
-        cookTime
-        description {
-          description
-        }
-        featured
         id
+        slug
         prepTime
         servings
         title
         content {
           ingredients
-          instructions
-          tools
           tags
         }
         image {
