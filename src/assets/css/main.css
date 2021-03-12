@@ -440,7 +440,7 @@ form > *:last-child {
 .error-page {
   min-height: calc(100vh - (95.48px + 4rem));
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 .error-page h1 {
   font-size: 9rem;
