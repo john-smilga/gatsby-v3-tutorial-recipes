@@ -429,9 +429,21 @@ form > *:last-child {
   margin-top: 2rem;
 }
 /*#########*/
-/* About */
+/* Error */
 /*#########*/
-
+.error-page {
+  text-align: center;
+}
+.error-page h1 {
+  font-size: 6rem;
+}
+.error-recipes {
+  padding: 3rem 0;
+}
+.error-recipes > p {
+  text-align: center;
+  max-width: 100%;
+}
 /*#########*/
 /* About */
 /*#########*/
