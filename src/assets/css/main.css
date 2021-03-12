@@ -528,14 +528,12 @@ form > *:last-child {
 }
 .recipe {
   display: block;
-  font-size: 1rem;
 }
 .recipe-img {
   height: 15rem;
   border-radius: var(--borderRadius);
 }
 .recipe h5 {
-  font-size: 0.9em;
   margin-bottom: 0;
   margin-top: 0.25rem;
   line-height: 1;
@@ -543,7 +541,6 @@ form > *:last-child {
   font-weight: bold;
 }
 .recipe p {
-  font-size: 0.7em;
   margin-bottom: 0;
   line-height: 1;
   color: var(--grey-900);
