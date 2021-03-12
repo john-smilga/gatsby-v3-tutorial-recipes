@@ -426,22 +426,33 @@ form > *:last-child {
 /*#########*/
 .page-footer {
   text-align: center;
-  margin-top: 2rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+}
+.page-footer h4 {
+  margin-bottom: 0;
 }
 /*#########*/
 /* Error */
 /*#########*/
 .error-page {
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - (95.48px + 4rem));
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .error-page h1 {
-  font-size: 7rem;
+  font-size: 8rem;
 }
-
+@media screen and (min-width: 992px) {
+  .error-page {
+    min-height: calc(100vh - (6rem + 4rem));
+  }
+}
 /*#########*/
 /* About */
 /*#########*/
