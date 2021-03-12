@@ -1,22 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
+import setupTags from "../utils/setupTags"
 const TagsList = ({ recipes }) => {
   // get all tags
-  let tags = recipes.map(recipe => {
-    return recipe.content.tags
-  })
-  // flatten array
-  tags = tags.flat()
-  // get amount
-  tags = tags.reduce((total, item) => {
-    if (total[item]) {
-      total[item] = total[item] + 1
-    } else {
-      total[item] = 1
-    }
-    return total
-  }, {})
-  const newTags = Object.entries(tags)
+  const newTags = setupTags(recipes)
 
   return (
     <div className="tags-container">
