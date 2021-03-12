@@ -29,8 +29,8 @@ const About = ({ data }) => {
           placeholder="blurred"
         ></StaticImage>
       </section>
-      <section className="about-recipes">
-        <p>Gastropub ethical mlkshk put a bird on it.</p>
+      <section className="featured-recipes">
+        <h5>Look at this Awesomesauce! </h5>
         <RecipesList recipes={recipes} />
       </section>
     </main>

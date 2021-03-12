@@ -58,7 +58,7 @@
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
-  --backgroundColor: var(--white);
+  --backgroundColor: var(--grey-0);
   --textColor: var(--grey-1000);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
@@ -89,6 +89,7 @@ body {
 }
 
 p {
+  margin: 0;
   margin-bottom: 1rem;
   max-width: 40em;
 }
@@ -144,7 +145,7 @@ a {
   display: block;
   object-fit: cover;
 }
-form {
+.form {
   width: 100%;
   background: var(--white);
   border-radius: var(--borderRadius);
@@ -163,7 +164,7 @@ textarea {
   width: 100%;
   padding: 0.375rem 0.75rem;
   border-radius: var(--borderRadius);
-  background: var(--grey-50);
+  background: var(--grey-0);
   border-color: transparent;
   border: 1px solid var(--grey-300);
 }
@@ -254,6 +255,7 @@ button.block {
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
+  padding-bottom: 3rem;
 }
 .title {
   text-align: center;
@@ -322,6 +324,10 @@ form > *:last-child {
   border-top-color: var(--clr-primary-5);
   animation: spinner 0.6s linear infinite;
 }
+
+/*#########*/
+/* END OF GLOBALS */
+/*#########*/
 
 /*#########*/
 /* Navbar */
@@ -430,8 +436,10 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--black);
+  color: var(--white);
 }
-.page-footer h4 {
+.page-footer h5 {
   margin-bottom: 0;
 }
 /*#########*/
@@ -451,6 +459,22 @@ form > *:last-child {
   }
 }
 /*#########*/
+/* Contact */
+/*#########*/
+
+.contact-page {
+  display: grid;
+  gap: 2rem 3rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .contact-page {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/*#########*/
 /* About */
 /*#########*/
 
@@ -461,6 +485,7 @@ form > *:last-child {
 .about-page {
   display: grid;
   gap: 2rem 4rem;
+  padding-bottom: 3rem;
 }
 .about-img {
   border-radius: var(--borderRadius);
@@ -476,10 +501,8 @@ form > *:last-child {
     height: 400px;
   }
 }
-.about-recipes {
-  padding: 3rem 0;
-}
-.about-recipes > p {
+
+.featured-recipes > h5 {
   text-align: center;
   max-width: 100%;
 }
@@ -548,7 +571,7 @@ form > *:last-child {
 .tags-list a {
   text-transform: capitalize;
   display: block;
-  color: var(--textColor);
+  color: var(--grey-800);
   transition: var(--transition);
 }
 .tags-list a:hover {
@@ -566,12 +589,12 @@ form > *:last-child {
   margin-top: 0.25rem;
   line-height: 1;
   color: var(--textColor);
-  font-weight: bold;
+  font-weight: 600;
 }
 .recipe p {
   margin-bottom: 0;
   line-height: 1;
-  color: var(--grey-900);
+  color: var(--grey-800);
   margin-top: 0.5rem;
 }
 @media screen and (min-width: 576px) {
@@ -614,6 +637,42 @@ form > *:last-child {
     font-size: 1.15rem;
   }
   .recipes-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*#########*/
+/* Tags */
+/*#########*/
+
+.tags-page {
+  display: grid;
+  gap: 2rem;
+}
+.tag {
+  background: var(--grey-700);
+  border-radius: var(--borderRadius);
+  text-align: center;
+  color: var(--white);
+  transition: var(--transition);
+  padding: 0.75rem 0;
+}
+.tag:hover {
+  background: var(--primary-500);
+}
+.tag h5,
+.tag p {
+  margin-bottom: 0;
+}
+.tag h5 {
+  font-weight: 600;
+}
+@media screen and (min-width: 576px) {
+  .tags-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tags-page {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
