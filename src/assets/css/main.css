@@ -432,6 +432,10 @@ form > *:last-child {
 /* About */
 /*#########*/
 
+/*#########*/
+/* About */
+/*#########*/
+
 .about-page h2 {
   text-transform: none;
   font-weight: bold;
@@ -454,7 +458,13 @@ form > *:last-child {
     height: 400px;
   }
 }
-
+.about-recipes {
+  padding: 3rem 0;
+}
+.about-recipes > p {
+  text-align: center;
+  max-width: 100%;
+}
 /*#########*/
 /* Hero */
 /*#########*/

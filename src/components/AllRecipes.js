@@ -4,7 +4,7 @@ import RecipesList from "./RecipesList"
 import TagsList from "./TagsList"
 const query = graphql`
   {
-    allContentfulRecipe {
+    allContentfulRecipe(sort: { fields: title, order: ASC }) {
       nodes {
         contentful_id
         cookTime
