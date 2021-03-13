@@ -10,7 +10,10 @@ const Layout = ({ children }) => {
       <Navbar />
       {children}
       <footer className="page-footer">
-        <h5>&copy; {new Date().getFullYear()} Gatsby Recipes</h5>
+        <p>
+          &copy; {new Date().getFullYear()} <span>SimplyRecipes</span>. Built
+          with <a href="https://www.gatsbyjs.com/">Gatsby</a>
+        </p>
       </footer>
     </>
   )

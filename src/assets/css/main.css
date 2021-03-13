@@ -350,7 +350,7 @@ form > *:last-child {
 .nav-header img {
   width: 200px;
   margin-left: -6px;
-  margin-bottom: -6px;
+  margin-bottom: -9px;
 }
 .nav-btn {
   padding: 0.15rem 0.75rem;
@@ -442,6 +442,14 @@ form > *:last-child {
 .page-footer h5 {
   margin-bottom: 0;
 }
+.page-footer p {
+  margin-bottom: 0;
+}
+.page-footer span,
+.page-footer a {
+  color: var(--primary-500);
+}
+
 /*#########*/
 /* Error */
 /*#########*/
@@ -535,6 +543,7 @@ form > *:last-child {
   color: var(--white);
   text-align: center;
 }
+
 @media only screen and (min-width: 768px) {
   .hero-text h1 {
     font-size: 4rem;
