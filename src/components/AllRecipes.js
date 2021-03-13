@@ -8,6 +8,7 @@ const query = graphql`
       nodes {
         id
         slug
+        cookTime
         prepTime
         servings
         title

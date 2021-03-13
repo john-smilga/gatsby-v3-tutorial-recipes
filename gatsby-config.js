@@ -11,7 +11,7 @@ module.exports = {
     description: "Nice and clean recipes site",
     author: "@johnsmilga",
     twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
+    image: "/main.jpeg",
     siteUrl: "https://gatsby-v3-tutorial-recipes.netlify.app/",
   },
   plugins: [
