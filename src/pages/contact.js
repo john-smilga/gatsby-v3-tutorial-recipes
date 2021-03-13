@@ -56,12 +56,13 @@ export const query = graphql`
       filter: { featured: { eq: true } }
     ) {
       nodes {
+        slug
         id
         title
         prepTime
         cookTime
         image {
-          gatsbyImageData(backgroundColor: "")
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
     }

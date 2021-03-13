@@ -8,6 +8,10 @@ exports.createPages = async ({ graphql, actions }) => {
       content: allContentfulRecipe {
         nodes {
           slug
+          content {
+            ingredients
+            tags
+          }
         }
       }
     }
@@ -20,6 +24,15 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: recipe.slug,
       },
+    })
+    recipe.content.tags.forEach(tag => {
+      createPage({
+        path: `/${tag}`,
+        component: path.resolve(`src/templates/tag-template.js`),
+        context: {
+          tag: tag,
+        },
+      })
     })
   })
 }

@@ -22,8 +22,9 @@ const About = ({ data }) => {
             contact
           </Link>
         </article>
+
         <StaticImage
-          src="../assets/images/about-photo.jpeg"
+          src="../assets/images/about.jpeg"
           alt="Person Pouring Salt in Bowl"
           className="about-img"
           placeholder="blurred"
@@ -44,12 +45,13 @@ export const query = graphql`
       filter: { featured: { eq: true } }
     ) {
       nodes {
+        slug
         id
         title
         prepTime
         cookTime
         image {
-          gatsbyImageData(backgroundColor: "")
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
     }

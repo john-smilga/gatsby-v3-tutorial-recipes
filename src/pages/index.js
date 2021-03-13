@@ -7,7 +7,7 @@ const Home = () => {
     <main className="page">
       <header className="hero">
         <StaticImage
-          src="../assets/images/main-bcg.jpeg"
+          src="../assets/images/main.jpeg"
           alt="Person Pouring Salt in Bowl"
           className="hero-img"
           placeholder="tracedSVG"
