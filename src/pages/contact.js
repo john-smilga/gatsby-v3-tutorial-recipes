@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
 
 const Contact = ({ data }) => {
