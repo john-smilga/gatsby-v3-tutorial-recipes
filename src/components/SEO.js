@@ -30,11 +30,22 @@ const SEO = ({ title, description }) => {
       <meta name="description" content={description || siteDesc} />
       <meta name="image" content={image} />
       {/* twitter cards */}
-      <meta name="twitter:card" content="summary_large_image" />
+
+      {/* <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDesc} />
-      <meta name="twitter:image" content={`${siteUrl}${image}`} />
+      <meta name="twitter:image" content={`${siteUrl}${image}`} /> */}
+      <meta name="twitter:title" content="European Travel Destinations " />
+      <meta
+        name="twitter:description"
+        content=" Offering tour packages for individuals or groups."
+      />
+      <meta
+        name="twitter:image"
+        content="https://gatsby-v3-tutorial-recipes.netlify.app/main.png"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   )
 }
