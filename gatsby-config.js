@@ -12,7 +12,7 @@ module.exports = {
     author: "@johnsmilga",
     twitterUsername: "@john_smilga",
     image: "/main.png",
-    siteUrl: "https://gatsby-v3-tutorial-recipes.netlify.app/",
+    siteUrl: "https://gatsby-v3-tutorial-recipes.netlify.app",
   },
   plugins: [
     {
