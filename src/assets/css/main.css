@@ -678,7 +678,7 @@ form > *:last-child {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .tags-page {
     grid-template-columns: 1fr 1fr 1fr;
   }
