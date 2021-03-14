@@ -10,9 +10,11 @@ const TagTemplate = ({ data, pageContext }) => {
     <>
       <SEO title={pageContext.tag} />
       <main className="page">
-        <h2>{pageContext.tag}</h2>
-        <div className="tag-recipes">
-          <RecipesList recipes={recipes} />
+        <div className="tags-template">
+          <h2>{pageContext.tag}</h2>
+          <div className="tag-recipes">
+            <RecipesList recipes={recipes} />
+          </div>
         </div>
       </main>
     </>

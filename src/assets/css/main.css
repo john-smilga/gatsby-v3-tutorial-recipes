@@ -255,8 +255,11 @@ button.block {
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-bottom: 3rem;
 }
+.page {
+  min-height: calc(100vh - (6rem + 4rem));
+}
+
 .title {
   text-align: center;
   margin-bottom: 2rem;
@@ -342,7 +345,7 @@ form > *:last-child {
   max-width: var(--max-width);
 }
 .nav-header {
-  padding: 2rem 0;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -402,6 +405,7 @@ form > *:last-child {
   .nav-header {
     padding: 0;
     margin-right: 2rem;
+    height: auto;
   }
 
   .nav-btn {
@@ -454,18 +458,14 @@ form > *:last-child {
 /* Error */
 /*#########*/
 .error-page {
-  min-height: calc(100vh - (95.48px + 4rem));
+  min-height: calc(100vh - (6rem + 4rem));
   text-align: center;
   padding-top: 3rem;
 }
 .error-page h1 {
   font-size: 9rem;
 }
-@media screen and (min-width: 992px) {
-  .error-page {
-    min-height: calc(100vh - (6rem + 4rem));
-  }
-}
+
 /*#########*/
 /* Contact */
 /*#########*/
@@ -560,6 +560,7 @@ form > *:last-child {
 .recipes-list {
   display: grid;
   gap: 2rem 1rem;
+  padding-bottom: 3rem;
 }
 .tags-container {
   order: 1;
