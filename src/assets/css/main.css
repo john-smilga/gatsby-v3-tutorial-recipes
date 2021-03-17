@@ -4,6 +4,7 @@
 ::before {
   box-sizing: border-box;
 }
+
 :root {
   /* COLORS  */
   /* primary */
@@ -369,7 +370,7 @@ form > *:last-child {
   transition: var(--transition);
 }
 .show-links {
-  height: 383px;
+  height: 23.9375rem;
 }
 
 .nav-link {
