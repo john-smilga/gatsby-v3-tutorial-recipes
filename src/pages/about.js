@@ -1,14 +1,15 @@
 import React from "react"
+import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
-import SEO from "../components/SEO"
-
-const About = ({ data }) => {
-  const recipes = data.allContentfulRecipe.nodes
+const About = ({
+  data: {
+    allContentfulRecipe: { nodes: recipes },
+  },
+}) => {
   return (
-    <>
-      <SEO title="About" />
+    <Layout>
       <main className="page">
         <section className="about-page">
           <article>
@@ -21,25 +22,23 @@ const About = ({ data }) => {
               Taiyaki tumblr flexitarian jean shorts brunch, aesthetic salvia
               retro.
             </p>
-
             <Link to="/contact" className="btn">
               contact
             </Link>
           </article>
-
           <StaticImage
             src="../assets/images/about.jpeg"
             alt="Person Pouring Salt in Bowl"
             className="about-img"
             placeholder="blurred"
-          ></StaticImage>
+          />
         </section>
         <section className="featured-recipes">
-          <h5>Look at this Awesomesauce! </h5>
+          <h5>Look at this Awesomesouce!</h5>
           <RecipesList recipes={recipes} />
         </section>
       </main>
-    </>
+    </Layout>
   )
 }
 
@@ -50,13 +49,12 @@ export const query = graphql`
       filter: { featured: { eq: true } }
     ) {
       nodes {
-        slug
         id
         title
-        prepTime
         cookTime
+        prepTime
         image {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }

@@ -1,16 +1,15 @@
 import React from "react"
+import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllRecipes from "../components/AllRecipes"
-import SEO from "../components/SEO"
-const Home = () => {
+export default function Home() {
   return (
-    <>
-      <SEO title="Home" description="simply recipes home page" />
+    <Layout>
       <main className="page">
         <header className="hero">
           <StaticImage
             src="../assets/images/main.jpeg"
-            alt="Person Pouring Salt in Bowl"
+            alt="eggs"
             className="hero-img"
             placeholder="tracedSVG"
             layout="fullWidth"
@@ -22,12 +21,8 @@ const Home = () => {
             </div>
           </div>
         </header>
-        <section>
-          <AllRecipes />
-        </section>
+        <AllRecipes />
       </main>
-    </>
+    </Layout>
   )
 }
-
-export default Home

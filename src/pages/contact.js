@@ -1,19 +1,16 @@
 import React from "react"
-
-import { graphql } from "gatsby"
+import Layout from "../components/Layout"
+import { Link, graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
-import SEO from "../components/SEO"
 
 const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
-
   return (
-    <>
-      <SEO title="Contact" />
+    <Layout>
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
-            <h3>Want to get in touch?</h3>
+            <h3>Want To Get In Touch?</h3>
             <p>
               Four dollar toast biodiesel plaid salvia actually pickled banjo
               bespoke mlkshk intelligentsia edison bulb synth.
@@ -31,8 +28,8 @@ const Contact = ({ data }) => {
                 <input type="text" name="name" id="name" />
               </div>
               <div className="form-row">
-                <label htmlFor="email">your name</label>
-                <input type="email" name="email" id="email" />
+                <label htmlFor="email">your email</label>
+                <input type="text" name="email" id="email" />
               </div>
               <div className="form-row">
                 <label htmlFor="message">message</label>
@@ -45,11 +42,11 @@ const Contact = ({ data }) => {
           </article>
         </section>
         <section className="featured-recipes">
-          <h5>Look at this Awesomesauce! </h5>
+          <h5>Look at this Awesomesouce!</h5>
           <RecipesList recipes={recipes} />
         </section>
       </main>
-    </>
+    </Layout>
   )
 }
 
@@ -60,16 +57,16 @@ export const query = graphql`
       filter: { featured: { eq: true } }
     ) {
       nodes {
-        slug
         id
         title
-        prepTime
         cookTime
+        prepTime
         image {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }
   }
 `
+
 export default Contact

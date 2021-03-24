@@ -1,12 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import setupTags from "../utils/setupTags"
+import { Link } from "gatsby"
 const TagsList = ({ recipes }) => {
-  // get all tags
   const newTags = setupTags(recipes)
-
   return (
-    <div className="tags-container">
+    <div className="tag-container">
       <h4>recipes</h4>
       <div className="tags-list">
         {newTags.map((tag, index) => {

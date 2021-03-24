@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400"); */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
 *,
 ::after,
 ::before {
@@ -507,6 +507,9 @@ form > *:last-child {
     align-items: center;
     height: 400px;
   }
+  .about-img {
+    height: 100%;
+  }
 }
 
 .featured-recipes > h5 {
@@ -556,7 +559,6 @@ form > *:last-child {
 .recipes-container {
   display: grid;
   gap: 2rem 1rem;
-  padding-bottom: 3rem;
 }
 
 .recipes-list {
@@ -657,6 +659,7 @@ form > *:last-child {
 .tags-page {
   display: grid;
   gap: 2rem;
+  padding-bottom: 3rem;
 }
 .tag {
   background: var(--grey-700);
@@ -694,6 +697,9 @@ form > *:last-child {
 .recipe-hero {
   display: grid;
   gap: 3rem;
+}
+.recipe-hero .about-img {
+  height: 400px;
 }
 .recipe-icons {
   display: grid;
@@ -735,10 +741,6 @@ form > *:last-child {
   .recipe-hero {
     grid-template-columns: 4fr 5fr;
     align-items: center;
-    height: 400px;
-  }
-  .about-img {
-    height: 100%;
   }
 }
 .recipe-content {

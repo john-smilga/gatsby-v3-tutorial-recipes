@@ -1,11 +1,10 @@
 const path = require("path")
-
-// create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+
   const result = await graphql(`
     query GetRecipes {
-      content: allContentfulRecipe {
+      allContentfulRecipe {
         nodes {
           content {
             tags
@@ -15,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.content.nodes.forEach(recipe => {
+  result.data.allContentfulRecipe.nodes.forEach(recipe => {
     recipe.content.tags.forEach(tag => {
       createPage({
         path: `/${tag}`,

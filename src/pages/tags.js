@@ -1,14 +1,11 @@
 import React from "react"
+import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import setupTags from "../utils/setupTags"
-import SEO from "../components/SEO"
-
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
-
   return (
-    <>
-      <SEO title="Tags" />
+    <Layout>
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {
@@ -22,9 +19,10 @@ const Tags = ({ data }) => {
           })}
         </section>
       </main>
-    </>
+    </Layout>
   )
 }
+
 export const query = graphql`
   {
     allContentfulRecipe {
@@ -36,4 +34,5 @@ export const query = graphql`
     }
   }
 `
+
 export default Tags

@@ -1,19 +1,16 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import RecipesList from "./RecipesList"
 import TagsList from "./TagsList"
+import RecipesList from "./RecipesList"
+import { graphql, useStaticQuery } from "gatsby"
 const query = graphql`
   {
     allContentfulRecipe(sort: { fields: title, order: ASC }) {
       nodes {
         id
-        slug
+        title
         cookTime
         prepTime
-        servings
-        title
         content {
-          ingredients
           tags
         }
         image {
@@ -23,8 +20,7 @@ const query = graphql`
     }
   }
 `
-
-const Recipes = () => {
+const AllRecipes = () => {
   const data = useStaticQuery(query)
   const recipes = data.allContentfulRecipe.nodes
 
@@ -36,4 +32,4 @@ const Recipes = () => {
   )
 }
 
-export default Recipes
+export default AllRecipes

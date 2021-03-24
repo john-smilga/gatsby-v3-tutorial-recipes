@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
-import SEO from "../components/SEO"
+import Layout from "../components/Layout"
 const RecipeTemplate = ({ data }) => {
   const {
     title,
@@ -12,13 +12,11 @@ const RecipeTemplate = ({ data }) => {
     servings,
     description: { description },
     image,
-  } = data.content
-  const { tags, instructions, ingredients, tools } = content
+  } = data.contentfulRecipe
   const pathToImage = getImage(image)
-
+  const { tags, instructions, ingredients, tools } = content
   return (
-    <>
-      <SEO title={title} description={description} />
+    <Layout>
       <main className="page">
         <div className="recipe-page">
           {/* hero */}
@@ -31,6 +29,7 @@ const RecipeTemplate = ({ data }) => {
             <article className="recipe-info">
               <h2>{title}</h2>
               <p>{description}</p>
+              {/* icons */}
               <div className="recipe-icons">
                 <article>
                   <BsClock />
@@ -44,15 +43,16 @@ const RecipeTemplate = ({ data }) => {
                 </article>
                 <article>
                   <BsPeople />
-                  <h5>servings</h5>
+                  <h5>serving</h5>
                   <p>{servings} </p>
                 </article>
               </div>
+              {/* tags */}
               <p className="recipe-tags">
                 Tags :
                 {tags.map((tag, index) => {
                   return (
-                    <Link key={index} to={`/${tag}`}>
+                    <Link to={`/${tag}`} key={index}>
                       {tag}
                     </Link>
                   )
@@ -101,13 +101,13 @@ const RecipeTemplate = ({ data }) => {
           </section>
         </div>
       </main>
-    </>
+    </Layout>
   )
 }
 
 export const query = graphql`
   query getSingleRecipe($title: String) {
-    content: contentfulRecipe(title: { eq: $title }) {
+    contentfulRecipe(title: { eq: $title }) {
       title
       cookTime
       content {
